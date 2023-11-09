@@ -245,7 +245,7 @@ Response:
 ```
 
 ## Requirements
-The listing service has been built already. You need to build the remaining two components: the user service and the public API layer. The implementation of the listing service can serve as a good starting point to learn more about how to structure a web application using the Tornado web framework.
+The listing service has been built already. You need to build the remaining two components: the user service and the public API layer. The implementation of the listing service can serve as a good starting point to learn more about how to structure a web application using the java spring boot.
 
 The first priority would be to get a working system up and running! A great submission would demonstrate a grasp of the principles of microservice architecture.
 
