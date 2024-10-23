@@ -1,38 +1,20 @@
-package com.exercise.listingservice.entity;
+package com.exercise.listingservice.dto;
 
-
-import jakarta.persistence.*;
-
-import java.util.List;
-
-@Entity(name = "listings")
-public class Listing {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PublicListingDto {
     private Integer id;
-
-    private Integer userId;
     private String listingType;
     private Integer price;
     private Long createdAt;
     private Long updatedAt;
+    private UserDto user;
 
-
+    // Getters and Setters
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
-    }
-//
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
     }
 
     public String getListingType() {
@@ -67,8 +49,11 @@ public class Listing {
         this.updatedAt = updatedAt;
     }
 
+    public UserDto getUser() {
+        return user;
+    }
 
-
-
-
+    public void setUser(UserDto user) {
+        this.user = user;
+    }
 }

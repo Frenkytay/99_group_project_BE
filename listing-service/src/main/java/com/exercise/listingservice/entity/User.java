@@ -1,23 +1,19 @@
 package com.exercise.listingservice.entity;
 
-
 import jakarta.persistence.*;
 
 import java.util.List;
 
-@Entity(name = "listings")
-public class Listing {
+@Entity(name="users")
+public class User {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    private Integer userId;
-    private String listingType;
-    private Integer price;
+    private String name;
     private Long createdAt;
     private Long updatedAt;
-
 
     public Integer getId() {
         return id;
@@ -26,30 +22,15 @@ public class Listing {
     public void setId(Integer id) {
         this.id = id;
     }
-//
-    public Integer getUserId() {
-        return userId;
+    public String getName() {
+        return name;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getListingType() {
-        return listingType;
-    }
 
-    public void setListingType(String listingType) {
-        this.listingType = listingType;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
 
     public Long getCreatedAt() {
         return createdAt;
@@ -59,6 +40,8 @@ public class Listing {
         this.createdAt = createdAt;
     }
 
+
+
     public Long getUpdatedAt() {
         return updatedAt;
     }
@@ -66,8 +49,6 @@ public class Listing {
     public void setUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
     }
-
-
 
 
 
